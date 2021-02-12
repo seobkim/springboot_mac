@@ -20,10 +20,19 @@ apply plugin:'io.spring.dependency-management'
 
 repositories{
     mavenCentral()
+    jcenter()
 }
 dependencies{
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile('org.projectlombok:lombok')
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    //롬복 추가
+    //gradle 버전 5부터 롬복에 대한 디펜던시 각자 설정 해주어야함
+
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.h2database:h2')
 }
 
 
